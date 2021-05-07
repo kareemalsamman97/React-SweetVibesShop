@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+.warninglabel{
+    font-family: 'Raleway', Arial, sans-serif;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #A87DAB;
+
+
+}
+.orderlabel{
+    font-family: 'Raleway', Arial, sans-serif;
+    padding: 10px;
+    color: #A87DAB;
+}
+
+.cartimage{
+
+    width: 200px;
+    height: 200px;
+    margin-left: 45%;
+    margin-top: 10%;
+}
+.thankyoumessage{
+    font-family: 'Homemade Apple', cursive;
+   padding-left: 45%;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.messagelabels{
+    font-family: 'Raleway', Arial, sans-serif;
+    padding-left:32%;
+}
+.Cricle{
+    position: absolute;
+    top: 40%;
+    left: 48%;
+}
+.CricleLabel{
+    position: absolute;
+    font-family: 'Raleway', Arial, sans-serif;
+    top: 50%;
+    left: 40%;
+}
+@media only screen and (max-width: 768px){
+    .CricleLabel{
+        
+        left: 20%;
+    }
+   .cartimage{
+    margin-left: 30%;
+   }
+   .messagelabels {
+    margin-left: -10%;
+   }
+   .thankyoumessage{
+    margin-left: -20%;
+   }
+   .orderlabel {
+    min-width: 300px;
+   }
+}
