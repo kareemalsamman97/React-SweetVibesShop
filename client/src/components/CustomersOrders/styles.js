@@ -39,8 +39,9 @@ export default makeStyles((theme) => ({
     height : "77%",
     zIndex: 1,
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
-    height: '100%'
-    
+    height: '100%',
+    position: "absolute",
+    top: '25%'
     },
     ['@media (width:428px)']: { // eslint-disable-line no-useless-computed-key
       height: '80%',
@@ -81,6 +82,7 @@ export default makeStyles((theme) => ({
     top: '105px',
     right: '3%',
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
+      position : 'absolute',
      top: '102%',
      right: '0',
      width: '100%',
@@ -129,29 +131,32 @@ export default makeStyles((theme) => ({
      },
   },
   paymentbutton:{
-    width: "51.5%",
+   width: '600px',
+   marginLeft: '107.3%',
+   marginTop : '-28%',
     height: 50,
     backgroundColor: "#BBBBBB",
-   position : 'absolute',
-   bottom: '22px',
-   left: '28%',
+ 
+  
    ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
-     minWidth: '100%',
-     left: '0'
+    width: '100%',
+     marginLeft: '-5px',
+     marginTop: '10%',
    
    },
   },
   buttonpayment:{
-    width: "51.5%",
+ 
     height: 50,
     backgroundColor: "#A87DAB",
-   position : 'absolute',
-   bottom: '43px',
-   left: '28%',
+    width: '600px',
+    marginLeft: '107.3%',
+    marginTop : '-28%',
    ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
-    minWidth: '98%',
-    left: '2px',
-    top: '92%'
+   width: '100%',
+     marginLeft: '-5px',
+     marginTop: '10%',
+   
   },
   },
   confirmedorderform: {

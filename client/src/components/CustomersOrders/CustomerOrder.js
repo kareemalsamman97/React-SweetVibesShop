@@ -183,15 +183,7 @@ const CustomerOrder = ({cart , CartisVisible }) => {
             variant="outlined"
             className={classes.textfield}
           />
-          
-          <Paper variant="outlined"  className={classes.paymenntpaper}>
-          <Typography className="orderlabel"  component="h3"  variant="h5">Payment Method : Cash</Typography>
-          <Button variant="contained" className={classes.paymentbutton} disabled>Submit Order</Button>
-          </Paper>
-          </Paper>
-          </div>
-
-          <Paper className={classes.imagepaperform} variant="outlined">
+             <Paper className={classes.imagepaperform} variant="outlined">
             <Typography className="orderlabel" className={classes.cartlabel} component="h2"  variant="h5">Cart</Typography>
             <GridList cellHeight={400} className={classes.gridList}>
             <div class="row">
@@ -209,6 +201,15 @@ const CustomerOrder = ({cart , CartisVisible }) => {
             </div>
             </GridList>
             </Paper>
+            
+          <Paper variant="outlined"  className={classes.paymenntpaper}>
+          <Typography className="orderlabel"  component="h3"  variant="h5">Payment Method : Cash</Typography>
+          <Button variant="contained" className={classes.paymentbutton} disabled>Submit Order</Button>
+          </Paper>
+          </Paper>
+          </div>
+
+        
        <div style={{ display: NoUserisVisible ? "block" : "none" }}>
       <form autoComplete="off" onSubmit={handleSubmit} noValidate  >
       <Alert severity="success" >
