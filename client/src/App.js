@@ -13,6 +13,7 @@ import UserOrder from './components/UserOrderList/UserOrder'
 import HomeCustomerOrder from './components/UserOrderList/Home'
 import AdminHomeNotification from './components/AdminBoxNotification/Home'
 import AboutUs from './components/Aboutus/aboutus'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 const App = () => (
   <BrowserRouter>
 
@@ -27,6 +28,7 @@ const App = () => (
         <Route path="/orders" exact component={HomeCustomerOrder} />
         <Route path="/admininbox" exact component={AdminHomeNotification} />
         <Route path="/aboutus" exact component={AboutUs} />
+        <Route component={ErrorPage} />
         <Route path="/" exact component={Home} />
       </Switch>
    
