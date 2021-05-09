@@ -18,9 +18,9 @@ app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 app.use("/orders", orderRouter);
 app.use("/notification", notificationRouter);
-
-
-const CONNECTION_URL = 'mongodb://root:Root_1997@kareemalsamman-sweetvibes-production/admin';
+//mongodb+srv://kareem:root@sweetvibes.womzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+//mongodb://root:Root_1997@kareemalsamman-sweetvibes-production/admin
+const CONNECTION_URL = 'mongodb+srv://kareem:root@sweetvibes.womzx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
