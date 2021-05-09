@@ -20,7 +20,7 @@ app.use("/orders", orderRouter);
 app.use("/notification", notificationRouter);
 
 
-const CONNECTION_URL = 'mongodb://root:root_1997@kareemalsamman-sweetvibes-production/admin';
+const CONNECTION_URL = 'mongodb://root:Root_1997@kareemalsamman-sweetvibes-production/admin';
 const PORT = process.env.PORT|| 4000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
