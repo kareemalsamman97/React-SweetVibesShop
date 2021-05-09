@@ -20,8 +20,8 @@ app.use("/orders", orderRouter);
 app.use("/notification", notificationRouter);
 
 
-const CONNECTION_URL = 'mongodb://sweetvibes:1997@kareemalsamman-sweetvibes-production/sweetvibedb';
-const PORT = process.env.PORT|| 5000;
+const CONNECTION_URL = 'mongodb://root:root_1997@kareemalsamman-sweetvibes-production/admin';
+const PORT = process.env.PORT|| 4000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
