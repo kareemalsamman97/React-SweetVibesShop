@@ -21,7 +21,7 @@ app.use("/notification", notificationRouter);
 
 
 const CONNECTION_URL = 'mongodb://root:Root_1997@kareemalsamman-sweetvibes-production/admin';
-const PORT = process.env.PORT|| 4000;
+const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
