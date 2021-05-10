@@ -26,6 +26,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import InfoIcon from '@material-ui/icons/Info';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 const Navbar = (props) => {
   
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -47,6 +48,7 @@ const Navbar = (props) => {
   const [ButtonAdminMobile, SetButtonAdminMobile] = useState(false);
   const [ProfileAdmin, SeProfileAdmin] = useState(false);
   const [SettingsisVisible, SettingssetIsVisible] = useState(false);
+  const [isLoggedin, setisLoggedin] = useState(false);
   const RamadanModeFromLocal = JSON.parse(localStorage.getItem('ramadanmode'))
   var userName = user?.result.name;
 
@@ -184,16 +186,18 @@ const Navbar = (props) => {
 
 const MobileSettings = () => {
   if (userName === undefined){
- 
+    setisLoggedin(false)
     history.push('/auth');
   }
    if (userName !== undefined && userName !==  "SweetVibes Admin"){
     setOpenMobile(!openMobile);
     setMobileAdminIconisVisible(false)
+    setisLoggedin(true)
    }
  if (userName ===  "SweetVibes Admin"){
   setOpenMobileAdmin(!openMobileAdmim);
   setMobileAdminIconisVisible(true)
+  setisLoggedin(true)
 }
 }
 
@@ -215,9 +219,10 @@ const AdminhandleCloseMobile = () => {
        
 
           <Avatar  className={classes.purple} style={{backgroundColor: LabelLogo}}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
-         
-         
-       
+         <IconButton style={{marginLeft : '-10px'}}>
+              <ArrowDropDownIcon  onClick={MobileSettings}/>
+            </IconButton>
+           
          
          <IconButton color="primary">
           <Link  to="/home" > < HomeIcon  onClick={closebuttonsettings} className={classes.mobileincons} style={{color: LabelLogo }}  /></Link>
@@ -258,6 +263,7 @@ const AdminhandleCloseMobile = () => {
             <div style={{ display: isVisible ? "block" : "none" }}>
            
             <img src ={AdminMan} className={classes.AdminButton} />
+        
             </div>
         
          

@@ -28,8 +28,8 @@ const App = () => (
         <Route path="/orders" exact component={HomeCustomerOrder} />
         <Route path="/admininbox" exact component={AdminHomeNotification} />
         <Route path="/aboutus" exact component={AboutUs} />
-        <Route component={ErrorPage} />
         <Route path="/" exact component={Home} />
+        <Route path="" component={ErrorPage} />
       </Switch>
    
   </BrowserRouter>

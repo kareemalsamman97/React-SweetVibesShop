@@ -122,6 +122,8 @@ export const Posts = (value) => {
     setalret("info")
     LabelEffectsetIsVisible(true)
     console.log(value)
+   
+    window.scrollTo({top: 0, behavior: 'smooth'});
     setTimeout(function(){
 
       LabelEffectsetIsVisible(false)
