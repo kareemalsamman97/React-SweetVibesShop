@@ -55,6 +55,10 @@ export default makeStyles((theme) => ({
       
     }
   },
+  navbarbuttons: {
+    marginLeft: '-20px',
+    marginTop: '3px',
+  },
   labelsettings: {
  
     cursor: 'pointer',

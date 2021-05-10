@@ -224,11 +224,15 @@ const AdminhandleCloseMobile = () => {
             </IconButton>
            
          
-         <IconButton color="primary">
+         <IconButton className={classes.navbarbuttons} >
           <Link  to="/home" > < HomeIcon  onClick={closebuttonsettings} className={classes.mobileincons} style={{color: LabelLogo }}  /></Link>
           <Link  to="/home" className={classes.mobilelabel} onClick={closebuttonsettings} style={{color: UserNameColor,  textDecoration: 'none'}}><a>Home</a></Link>
+          </IconButton>
+          <IconButton className={classes.navbarbuttons} >
           <Link  to="/shop" > <StorefrontIcon  onClick={closebuttonsettings} className={classes.mobileincons} style={{color: LabelLogo }}  /></Link>
           <Link  to="/shop" className={classes.mobilelabel} onClick={closebuttonsettings} style={{color: UserNameColor,  textDecoration: 'none'}}><a>Shop</a></Link>
+          </IconButton>
+          <IconButton className={classes.navbarbuttons} >
           <Link  to="/aboutus" > <InfoIcon  onClick={closebuttonsettings} className={classes.mobileincons} style={{color: LabelLogo }}  /></Link>
           <Link  to="/aboutus" className={classes.mobilelabel} onClick={closebuttonsettings} style={{color: UserNameColor,  textDecoration: 'none'}}><a>About Us</a></Link>
           </IconButton>
