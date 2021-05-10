@@ -69,7 +69,7 @@ const Home = () => {
       textAlign: 'center',
       color: theme.palette.text.secondary,
       ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
-        height: '400px',
+        height: '260px',
         width: '180px',
         padding: theme.spacing(1),
       }
@@ -213,7 +213,7 @@ const Home = () => {
          <Grid item xs={12}>
          <h1 className="Main_label">And Much More ...</h1>
         </Grid>
-        <Grid item xs={6} sm={4}>
+        <Grid item xs={6} sm={4} className={classes.mobilesettings}>
           <Paper className={classes.paperlast}>
           <figure class="snip1190">
           <img className="WhiteCocoImage" src={CookiesBrown} alt="CookiesBrown"/>

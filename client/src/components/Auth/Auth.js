@@ -1,6 +1,6 @@
 import React, { useState , useEffect  } from 'react';
 import { useDispatch } from 'react-redux';
-import { Avatar, Button, Paper, Grid, Typography, Container , Dialog , DialogActions , DialogTitle , DialogContent , DialogContentText ,TextField } from '@material-ui/core';
+import { Avatar, Backdrop ,CircularProgress , Button, Paper, Grid, Typography, Container , Dialog , DialogActions , DialogTitle , DialogContent , DialogContentText ,TextField } from '@material-ui/core';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
@@ -37,6 +37,13 @@ const SignUp = () => {
   const [AdminPassword, setAdminPassword] = useState();
   const [AdminEmail, setAdminEmail] = useState();
   const handleShowPassword = () => setShowPassword(!showPassword);
+  const [openbackdrop, setopenbackdrop] = React.useState(false);
+  const handleClosebackgrop = () => {
+    setopenbackdrop(false);
+  };
+  const handleTogglebackgrop = () => {
+    setopenbackdrop(!open);
+  };
   const switchMode = () => {
     setForm(initialState);
     setIsSignup((prevIsSignup) => !prevIsSignup);
@@ -49,8 +56,10 @@ const SignUp = () => {
     
     if (isSignup) {
       handleClickOpen();
+   
       dispatch(signup(form, history));
     } else {
+      handleTogglebackgrop();
       dispatch(signin(form, history));
     } 
     
@@ -67,7 +76,7 @@ const SignUp = () => {
   const googleSuccess = async (res) => {
     const result = res?.profileObj;
     const token = res?.tokenId;
-
+    handleTogglebackgrop();
     try {
       dispatch({ type: AUTH, data: { result, token } });
     
@@ -269,6 +278,12 @@ setAdmincode(e.target.value)
       </Dialog>
     </div>
       </div>
+          
+      <Backdrop className={classes.backdrop} open={openbackdrop} >
+        <CircularProgress color="inherit" />
+        <label> &nbsp; logging in ...</label>
+      </Backdrop>
+
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
         <Alert  severity="success">Your Account has been succesfully created!</Alert>

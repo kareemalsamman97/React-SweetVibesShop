@@ -220,7 +220,7 @@ const AdminhandleCloseMobile = () => {
 
           <Avatar  className={classes.purple} style={{backgroundColor: LabelLogo}}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
          <IconButton style={{marginLeft : '-10px'}}>
-              <ArrowDropDownIcon  onClick={MobileSettings}/>
+              <ArrowDropDownIcon style={{color : '#696969'}} onClick={MobileSettings}/>
             </IconButton>
            
          

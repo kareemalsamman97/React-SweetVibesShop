@@ -17,6 +17,10 @@ export default makeStyles((theme) => ({
       height: '100%',
     }
   },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),

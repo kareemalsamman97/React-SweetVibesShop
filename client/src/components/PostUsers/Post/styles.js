@@ -5,7 +5,7 @@ export default makeStyles({
     height: 0,
     paddingTop: '80.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    backgroundBlendMode: 'darken',
+    backgroundBlendMode: 'screen',
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
       maxheight: '300px',
     }
@@ -16,13 +16,13 @@ export default makeStyles({
   cart: {
     backgroundColor : '#BBBBBB',
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
-      height: '80px'
+      height: '40px'
     }
   },
   order: {
     backgroundColor : '#A87DAB',
     ['@media (max-width:768px)']: {
-      height: '80px'
+      height: '40px'
     }
   },
   root: {
