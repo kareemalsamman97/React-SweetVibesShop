@@ -36,13 +36,24 @@ const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [AdminPassword, setAdminPassword] = useState();
   const [AdminEmail, setAdminEmail] = useState();
+
+  const [buttonsignclicked, setbuttonsignclicked] = useState(false);
   const handleShowPassword = () => setShowPassword(!showPassword);
   const [openbackdrop, setopenbackdrop] = React.useState(false);
   const handleClosebackgrop = () => {
     setopenbackdrop(false);
   };
   const handleTogglebackgrop = () => {
+   
     setopenbackdrop(!open);
+  };
+
+  const givingtimerforsign = () => {
+    handleTogglebackgrop();
+    setbuttonsignclicked(true)
+ 
+   
+ 
   };
   const switchMode = () => {
     setForm(initialState);
@@ -52,20 +63,32 @@ const SignUp = () => {
  
   
   const handleSubmit = (e) => {
+    setbuttonsignclicked(true);
     e.preventDefault();
-    
+
     if (isSignup) {
       handleClickOpen();
    
       dispatch(signup(form, history));
     } else {
-      handleTogglebackgrop();
-      dispatch(signin(form, history));
+   
+    
+        dispatch(signin(form, history));
+        givingtimerforsign();
+     
     } 
     
   };
 
   useEffect(() => {
+  
+    if (buttonsignclicked === true){
+      setTimeout(function(){
+        if( typeof userName === 'undefined'){
+          handleClosebackgrop()
+        }
+      }, 5000);
+    }
       if( typeof userName !== 'undefined'){
       history.push('/home');
     }
@@ -281,7 +304,7 @@ setAdmincode(e.target.value)
           
       <Backdrop className={classes.backdrop} open={openbackdrop} >
         <CircularProgress color="inherit" />
-        <label> &nbsp; logging in ...</label>
+        <label> &nbsp;Checking / logging in ...</label>
       </Backdrop>
 
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
