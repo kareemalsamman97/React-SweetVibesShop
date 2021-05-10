@@ -22,7 +22,7 @@ const CustomerOrder = ({cart , CartisVisible }) => {
 
   const OrderNowStatus = JSON.parse(localStorage.getItem('IsOrderNowButtonClciked'))
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
-  const [Orders , setOrdersData] = useState ({ StatusOrder: 'Order In Progress', CustomerName: user?.result.name, CustomerOrders: [...cart.map(item =>({_id: item.title }))], CustomerPhone: '', CustomerEmail: user?.result.email, CustomerAddress: '', TotalPrice : totalpricefromcart , OrderImages: [...cart.map(item =>({_id: item.selectedFile }))],Quntity: [...cart.map(item =>({_id: item.qty }))],createdAt: moment().subtract(10, 'days').calendar() });
+  const [Orders , setOrdersData] = useState ({ StatusOrder: 'Order In Progress', CustomerName: user?.result.name, CustomerOrders: [...cart.map(item =>({_id: item.title }))], CustomerPhone: '', CustomerEmail: user?.result.email, CustomerAddress: '', TotalPrice : totalpricefromcart , OrderImages: [...cart.map(item =>({_id: item.selectedFile }))],Quntity: [...cart.map(item =>({_id: item.qty }))],createdAt: moment().format('L')});
   const [Noity , setNoityData] = useState ({ NotificationTitle : 'New Order has been added', NotificationImages: "https://bl3302files.storage.live.com/y4mAMA8Y6vFnXX-fk97Sw2JJ2hR6Pb8Bvvl0idKmaIodo-h2T5Z4FKjyid7_G4Ear_Wy35KBMxgSKOdhNjdPZepdmi927ckS9h-pBlLfQD727T2tbSSF8DdYTBjActjA84ejkylLE0_L_InJUOr6PsUGplXxIct4piT1y_D2C8R5w1mmmZwCxafRNtLnwYG3KUw?width=128&height=128&cropmode=none" , NotificationType: 'NewOrder' , NotificationMessage: 'There a new order by the userName : [' + user?.result.name + '] has been created ' , NotificationSeenOrNot: 'No' , NotificationDate: moment().subtract(10, 'days').calendar() });
   const classes = useStyles();
   const [CreateTheOrder] = useState([]);
@@ -172,7 +172,7 @@ const CustomerOrder = ({cart , CartisVisible }) => {
             <TextField
             disabled
             label="Order Date"
-            defaultValue= {moment().subtract(10, 'days').calendar()}
+            defaultValue= {moment().format('L')}
             variant="outlined"
             className={classes.textfield}
           />
@@ -288,7 +288,7 @@ const CustomerOrder = ({cart , CartisVisible }) => {
             }}
             disabled
             label="Order Date"
-            defaultValue= {moment().subtract(10, 'days').calendar()}
+            defaultValue=  {moment().format('L')}
             variant="outlined"
             className={classes.textfield}
             
