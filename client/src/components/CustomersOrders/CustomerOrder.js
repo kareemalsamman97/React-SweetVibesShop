@@ -44,7 +44,7 @@ const CustomerOrder = ({cart , CartisVisible }) => {
    
   
   var data = {
-    
+    to_email:'morhed500@gmail.com',
     to_email:userEmail,
     to_name: userName,
     from_name: "Sweet Vibes",
