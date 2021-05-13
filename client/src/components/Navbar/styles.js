@@ -206,6 +206,7 @@ export default makeStyles((theme) => ({
   AdminButton: {
     color: '#A87DAB',
     width: '20px',
+    
     marginTop: '5px'
     
 

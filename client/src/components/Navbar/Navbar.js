@@ -238,7 +238,7 @@ const AdminhandleCloseMobile = () => {
           <Toolbar>
        
 
-          <Avatar  className={classes.purple} style={{backgroundColor: LabelLogo , display: AvatarLogginVisible ? "block" : "none" }}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+          <Avatar  className={classes.purple} style={{paddingLeft: '13px' , paddingTop: '8px' , backgroundColor: LabelLogo , display: AvatarLogginVisible ? "block" : "none" }}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
          <IconButton style={{marginLeft : '-10px', display: AvatarLogginVisible ? "block" : "none" }}>
               <ArrowDropDownIcon style={{color : '#696969'}} onClick={MobileSettings}/>
             </IconButton>
