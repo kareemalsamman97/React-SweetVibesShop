@@ -270,16 +270,22 @@ if(FormisVisible === true){
     localStorage.setItem('carttotalprice' , JSON.stringify(20))
     return { setCart: [] }
   }
-
-  window.addEventListener("popstate", () => {
-    history.go(1);
-});
-
-
-
+  useEffect(() => {
+    window.onpopstate = () => {
+      if(OrderNowStatus === true) {
+        localStorage.setItem('IsOrderNowButtonClciked' , JSON.stringify(false))
+        window.location.reload(true);
+        history.push('/shop')
+      }
+      if(OrderNowStatus === false) {
  
+        history.push('/shop')
+      }
+      
+    }
+  })
 
-
+  
 
   return (
  
@@ -344,7 +350,7 @@ if(FormisVisible === true){
     
 
     <div style={{ display: OrderisVisible ? "block" : "none" }} >
-    <OrderForm cart={cart}   RemoveAllCart={RemoveAllCart}  addToCart={addToCart} setCart={setCart}/>
+    <OrderForm cart={cart}   RemoveAllCart={RemoveAllCart}  addToCart={addToCart} setCart={setCart} />
     </div>
 
     </Grid>

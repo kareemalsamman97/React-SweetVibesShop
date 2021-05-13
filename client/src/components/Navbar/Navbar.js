@@ -51,7 +51,7 @@ const Navbar = (props) => {
   const [isLoggedin, setisLoggedin] = useState(false);
   const RamadanModeFromLocal = JSON.parse(localStorage.getItem('ramadanmode'))
   var userName = user?.result.name;
-
+  const OrderNowStatus = JSON.parse(localStorage.getItem('IsOrderNowButtonClciked'))
   const cartmount = JSON.parse(localStorage.getItem('cartstorage'))
   const logout = () => {
     dispatch({ type: actionType.LOGOUT });
@@ -66,7 +66,7 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
- 
+   
    
     if(userName ===  "SweetVibes Admin"){
       setMobileAdminIconisVisible(true)
@@ -97,6 +97,7 @@ const Navbar = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
+ 
   const handleToggle = () => {
   
     AdminMenusetIsVisible(false)
@@ -129,7 +130,10 @@ const Navbar = (props) => {
   }
  
   const closebuttonsettings =()=> {
-   
+    if(OrderNowStatus === true) {
+      localStorage.setItem('IsOrderNowButtonClciked' , JSON.stringify(false))
+      window.location.reload(true);
+    }
     AdminMenusetIsVisible(false)
       SettingssetIsVisible(false)
    

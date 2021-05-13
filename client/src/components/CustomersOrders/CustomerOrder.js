@@ -17,7 +17,7 @@ import * as emailjs from "emailjs-com";
 import cartimage from '../../images/order.png';
 import { useHistory } from "react-router-dom";
 import bagicon from './../../images/shopping-bag.png'
-const CustomerOrder = ({cart , CartisVisible }) => {
+const CustomerOrder = ({cart  }) => {
   const totalpricefromcart = JSON.parse(localStorage.getItem('carttotalprice'))
 
   const OrderNowStatus = JSON.parse(localStorage.getItem('IsOrderNowButtonClciked'))
@@ -120,6 +120,9 @@ const CustomerOrder = ({cart , CartisVisible }) => {
     e.preventDefault();
   
   }
+
+ 
+
   return (
    <div>
           <div style={{ display: AllFormisVisible ? "block" : "none" }}>

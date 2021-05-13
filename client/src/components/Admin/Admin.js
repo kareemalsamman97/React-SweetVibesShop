@@ -63,7 +63,16 @@ const AdminStorage = () => {
     const handleClose = () => {
       setOpen(false);
     };
-
+    const [pressed , setPressed] = React.useState(false);
+    useEffect(() => {
+      window.onpopstate = () => {
+        setPressed(true)
+        history.push('/storage')
+      }
+    })
+  
+   
+  
   const columns = [
     { id: 'tools', align: 'center', label: 'Tools', minWidth: 100},
     { id: 'image', align: 'center', label: 'Product Image', minWidth: 170 , maxWidth: 200},
