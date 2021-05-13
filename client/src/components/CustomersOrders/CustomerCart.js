@@ -59,7 +59,7 @@ const CustomersOrder = ({cart , addToCart , RemoveFromToCart , OrderNow , Remove
       textAlign: 'center',
       color: theme.palette.text.secondary,
       width: "100%",
-      height: '80px',
+      height: '90px',
       marginBottom: '20px',
     },
     expandOpen: {
@@ -174,10 +174,14 @@ const CustomersOrder = ({cart , addToCart , RemoveFromToCart , OrderNow , Remove
         <Grid container spacing={3}>
         <Paper className={classes.paper} elevation={3} style={{backgroundColor: AppBarColor}}>
         <div className="cartform"  style={{  color: UserNameColor}}>
-        <label  style={{  color: UserNameColor}} className="titlelabel" >{item.title}</label> <br />
-        <label >You Have {item.qty} x ₪ {item.tags}</label>
+         
+      
+          <label  style={{  color: UserNameColor}} className="titlelabel" >{item.title}</label> <br />
+      
+        <label className='qtylabel'>You Have {item.qty} x ₪ {item.tags}</label>
         <AddIcon style={{  color: LabelLogo}} className="addorder" onClick={()=> addToCart(item)}></AddIcon>
         <MinimizeIcon  style={{  color: LabelLogo}} className="removeorder" onClick={()=> RemoveFromToCart(item)}></MinimizeIcon>
+        <Avatar className="Avatar" src = {item.selectedFile} />
         </div>
        </Paper>
        
@@ -196,7 +200,7 @@ const CustomersOrder = ({cart , addToCart , RemoveFromToCart , OrderNow , Remove
           </div>
           <div>
             <div>Shipping Price</div>
-            <div>₪{ShippingPrice}</div>
+            <div>₪{ShippingPrice} / Free shiping above 50₪ </div>
           </div>
           <div>
             <div><strong>Total</strong></div>

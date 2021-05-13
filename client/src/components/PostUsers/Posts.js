@@ -134,7 +134,7 @@ export const Posts = (value) => {
      const exist = cart.find((x) => x.title === post.title)
      if(exist) {
        
-      setCart(cart.map((x) => x.title === post.title ? { ... exist , qty: exist.qty + 1 } : x ))
+      setCart(cart.map((x) => x.title === post.title  ? { ... exist , qty: exist.qty + 1 } : x ))
 
 
      } else {

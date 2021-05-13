@@ -62,15 +62,23 @@
    position: absolute;
    left: 5px;
 }
+.Avatar{
+    position: absolute;
+    top: -83px;
+    left: 240px;
+}
 .titlelabel{
     font-family: 'Raleway', Arial, sans-serif;
     color: black;
     font-size: large;
+ 
+    
 }
 .addorder{
     color: #A87DAB;
     position: absolute;
     left: 240px;
+    top:45px
 
 }
 .addorder :hover{
@@ -84,7 +92,10 @@
     color: #A87DAB;
     position: absolute;
     left: 260px;
-    top:27px
+    top:37px
+}
+.qtylabel{
+    margin-top: 11px;
 }
 .cartlabelempty{
     font-size: large;
