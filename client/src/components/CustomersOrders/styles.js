@@ -43,11 +43,7 @@ export default makeStyles((theme) => ({
     position: "absolute",
     top: '25%'
     },
-    ['@media (width:428px)']: { // eslint-disable-line no-useless-computed-key
-      height: '80%',
-      marginTop: '-70px'
-      
-      },
+    
   },
   mobilealert: {
     ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
