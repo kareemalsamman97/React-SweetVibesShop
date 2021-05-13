@@ -26,6 +26,7 @@ import { withStyles } from '@material-ui/core/styles';
 export const Posts = (value) => {
   const OrderNowStatus = JSON.parse(localStorage.getItem('IsOrderNowButtonClciked'))
   const isSigninClicked = JSON.parse(localStorage.getItem('isSigninClicked'))
+  const fullproductview = JSON.parse(localStorage.getItem('fullproductview'))
   const isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn'))
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cartdata') || '[]')
   const qtyOrder = JSON.parse(localStorage.getItem('qtyorder') || '0')
@@ -197,7 +198,7 @@ export const Posts = (value) => {
       localStorage.setItem('qtyorder' , JSON.stringify(0))
     }
     CartLabelsetIsVisible(true)
-
+    localStorage.setItem('fullproductview' , false)
     localStorage.setItem('isLoggedIn' , JSON.stringify(false))
     localStorage.setItem('isSigninClicked' , JSON.stringify(false))
     if(OrderisVisible === true) {
@@ -215,6 +216,7 @@ export const Posts = (value) => {
  
 const showProductFullID = () => {
   UserFormsetIsVisible(true)
+  localStorage.setItem('fullproductview' , true)
   localStorage.setItem('qtyorder' , JSON.stringify(0))
   setIsVisible(false)
 }
@@ -274,14 +276,20 @@ if(FormisVisible === true){
     window.onpopstate = () => {
       if(OrderNowStatus === true) {
         localStorage.setItem('IsOrderNowButtonClciked' , JSON.stringify(false))
-        window.location.reload(true);
+        setIsVisible(true)
+        OrdersetIsVisible(false)
         history.push('/shop')
       }
       if(OrderNowStatus === false) {
  
         history.push('/shop')
       }
-      
+      if(fullproductview === true){
+        UserFormsetIsVisible(false)
+        localStorage.setItem('fullproductview' , false)
+        setIsVisible(true)
+        history.push('/shop')
+      }
     }
   })
 
