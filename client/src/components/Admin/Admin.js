@@ -213,7 +213,7 @@ const AdminStorage = () => {
       if(EditFormisVisible === true)
       history.push('/storage')
       EditFormSetIsVisible(false)
-      StorageSetIsVisible(false)
+      StorageSetIsVisible(true)
     }
   })
 
