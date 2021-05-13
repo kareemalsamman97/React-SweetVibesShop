@@ -93,7 +93,7 @@ const Form = ({ currentId, setCurrentId , orderNowButton , addToCart , RemoveAll
       </div>
       <CardContent className="contant">
           <Typography component="h5" variant="h5">
-          {postData.title}
+          {postData.title} 
           </Typography>
          
           <Typography variant="subtitle1" color="textSecondary">

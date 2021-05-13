@@ -208,6 +208,15 @@ const AdminStorage = () => {
       AlretSetIsVisible(false)
     }, 1500);
   }
+  useEffect(() => {
+    window.onpopstate = () => {
+      if(EditFormisVisible === true)
+      history.push('/storage')
+      EditFormSetIsVisible(false)
+      StorageSetIsVisible(true)
+    }
+  })
+
   return (
     !posts.length ? 
     <div>
