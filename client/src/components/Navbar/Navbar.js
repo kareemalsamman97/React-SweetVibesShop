@@ -30,12 +30,14 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { render } from 'react-dom';
 const Navbar = (props) => {
   
+
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
 
   const location = useLocation();
   const history = useHistory();
   const [MainLogo, SetMainLogo] = useState(LogoIcon);
+
   const classes = useStyles();
   const [AdminSettingsisVisible, AdminSettingsetIsVisible] = useState(false);
   const [MobileAdminSettingsisVisible, SetMobileAdminSettingsisVisible] = useState(true);
@@ -230,6 +232,7 @@ const AdminhandleCloseMobile = () => {
   setOpenMobileAdmin(false);
 
 };
+
   return (
     <Container maxWidth="lg">
        <Grow in>
@@ -237,8 +240,8 @@ const AdminhandleCloseMobile = () => {
         <AppBar className = {classes.Bar} color="inherit" style = {{backgroundColor: AppBarColor}}>
           <Toolbar>
        
-
-          <Avatar  className={classes.purple} style={{paddingLeft: '13px' , paddingTop: '8px' , backgroundColor: LabelLogo , display: AvatarLogginVisible ? "block" : "none" }}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+          {AvatarLogginVisible &&     <Avatar  className={classes.purple} style={{ backgroundColor: LabelLogo , }}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>}
+     
          <IconButton style={{marginLeft : '-10px', display: AvatarLogginVisible ? "block" : "none" }}>
               <ArrowDropDownIcon style={{color : '#696969'}} onClick={MobileSettings}/>
             </IconButton>

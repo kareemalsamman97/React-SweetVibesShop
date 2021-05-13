@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { deepPurple } from '@material-ui/core/colors';
-
+import AvatarLogginVisible from './Navbar.js'
 export default makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
@@ -56,6 +56,7 @@ export default makeStyles((theme) => ({
     }
   },
   mobileButton: {
+  
     marginTop: '-10px',
     width: '115px',
     backgroundColor : '#A87DAB',
@@ -199,14 +200,14 @@ export default makeStyles((theme) => ({
     color: theme.palette.getContrastText(deepPurple[600]),
     backgroundColor: '#A87DAB',
     cursor: 'pointer',
-   
+
     
   },
 
   AdminButton: {
     color: '#A87DAB',
     width: '20px',
-    
+
     marginTop: '5px'
     
 
