@@ -49,19 +49,19 @@ export default makeStyles((theme) => ({
     }
   },
   root: {
-    backgroundColor : '#A87DAB',
+   color : 'white',
     '&:hover': {
-      backgroundColor : '#BBBBBB',
+      color: 'black',
       
     }
   },
   mobileButton: {
-  
+ 
     
     width: '115px',
-    backgroundColor : '#A87DAB',
+    color : 'white',
     '&:hover': {
-      backgroundColor : '#BBBBBB',
+      color : 'black',
       
     }
   },

@@ -246,7 +246,7 @@ const AdminhandleCloseMobile = () => {
               <ArrowDropDownIcon style={{color : '#696969'}} onClick={MobileSettings}/>
             </IconButton>
             <div style={{ display: ButtonLogginVisible ? "block" : "none" }}>
-         <Button component={Link} to="/auth" variant="contained" style={{backgroundColor: LabelLogo }} className={classes.mobileButton} startIcon={<PermIdentityIcon />} color="primary">Sign In</Button>
+         <Button component={Link} to="/auth" variant="contained" style={{backgroundColor: LabelLogo  }} className={classes.mobileButton} startIcon={<PermIdentityIcon />} >Sign In</Button>
            </div>
          
          <IconButton className={classes.navbarbuttons} >
