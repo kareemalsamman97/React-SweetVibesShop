@@ -1,4 +1,5 @@
 import React, { useState , useEffect} from 'react';
+import { useHistory } from 'react-router-dom'
 import { Card, CardActions, CardContent, CardMedia, Button, Typography , Grow} from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -19,15 +20,13 @@ const Post = ({  post, setCurrentId , onAdd , addToCart , showProductFullID  }) 
   const [cart , setCart] = useState([]);
   const [page , setPage] = useState('post')
   const [FullProductisVisible, FullProductsetIsVisible ] = useState(true);
-  
+  const history = useHistory()
   const classes = useStyles();
   const MenuClciked = () =>{
     FullProductsetIsVisible(false);
     
   }
-  useEffect(() => {
-
-  });
+  
  
   
   return (

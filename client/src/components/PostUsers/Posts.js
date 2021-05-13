@@ -270,6 +270,17 @@ if(FormisVisible === true){
     localStorage.setItem('carttotalprice' , JSON.stringify(20))
     return { setCart: [] }
   }
+
+  window.addEventListener("popstate", () => {
+    history.go(1);
+});
+
+
+
+ 
+
+
+
   return (
  
    
