@@ -277,7 +277,8 @@ if(FormisVisible === true){
       if(OrderNowStatus === true) {
         isissetIsVisible(true)
         localStorage.setItem('IsOrderNowButtonClciked' , JSON.stringify(false))
-    
+        localStorage.setItem('isSigninClicked' , JSON.stringify(false))
+        CartLabelsetIsVisible(true)
         OrdersetIsVisible(false)
         history.push('/shop')
       }

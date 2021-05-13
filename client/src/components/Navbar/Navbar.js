@@ -27,6 +27,7 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import InfoIcon from '@material-ui/icons/Info';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import { render } from 'react-dom';
 const Navbar = (props) => {
   
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -41,11 +42,14 @@ const Navbar = (props) => {
   const [AdminMenuisVisible, AdminMenusetIsVisible] = useState(false);
   const [MobileAdminIconisVisible, setMobileAdminIconisVisible] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [ButtonLogginVisible, setButtonLogginVisible] = useState(false);
   const [RamadanMode , SetRamadanMode] = useState(false);
   const [LabelLogo, SetLabelLogo] = useState('#A87DAB');
   const [AppBarColor, SetAppBarColor] = useState('white');
   const [UserNameColor, SetUserNameColor] = useState('black');
   const [ButtonAdminMobile, SetButtonAdminMobile] = useState(false);
+  const [AvatarLogginVisible, setAvatarLogginVisible] = useState(false);
+  
   const [ProfileAdmin, SeProfileAdmin] = useState(false);
   const [SettingsisVisible, SettingssetIsVisible] = useState(false);
   const [isLoggedin, setisLoggedin] = useState(false);
@@ -173,6 +177,7 @@ const Navbar = (props) => {
  }
  
  useEffect(() => {
+  Checking();
   if(RamadanModeFromLocal === true){
     SetMainLogo(RamadanLogo)
     SetLabelLogo('#F7CC70')
@@ -187,11 +192,22 @@ const Navbar = (props) => {
 });
 
 
+const Checking = () => {
+  if (userName === undefined){
+    setButtonLogginVisible(true)
+    setAvatarLogginVisible(false)
+  }
+  if (userName !== undefined){
+    setButtonLogginVisible(false)
+    setAvatarLogginVisible(true)
+  }
+}
 
 const MobileSettings = () => {
   if (userName === undefined){
     setisLoggedin(false)
     history.push('/auth');
+
   }
    if (userName !== undefined && userName !==  "SweetVibes Admin"){
     setOpenMobile(!openMobile);
@@ -222,13 +238,16 @@ const AdminhandleCloseMobile = () => {
           <Toolbar>
        
 
-          <Avatar  className={classes.purple} style={{backgroundColor: LabelLogo}}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
-         <IconButton style={{marginLeft : '-10px'}}>
+          <Avatar  className={classes.purple} style={{backgroundColor: LabelLogo , display: AvatarLogginVisible ? "block" : "none" }}  onClick={MobileSettings} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+         <IconButton style={{marginLeft : '-10px', display: AvatarLogginVisible ? "block" : "none" }}>
               <ArrowDropDownIcon style={{color : '#696969'}} onClick={MobileSettings}/>
             </IconButton>
-           
+     
          
          <IconButton className={classes.navbarbuttons} >
+         <div style={{ display: ButtonLogginVisible ? "block" : "none" }}>
+         <Button component={Link} to="/auth" variant="contained" style={{backgroundColor: LabelLogo }} className={classes.mobileButton} startIcon={<PermIdentityIcon />} color="primary">Sign In</Button>
+           </div>
           <Link  to="/home" > < HomeIcon  onClick={closebuttonsettings} className={classes.mobileincons} style={{color: LabelLogo }}  /></Link>
           <Link  to="/home" className={classes.mobilelabel} onClick={closebuttonsettings} style={{color: UserNameColor,  textDecoration: 'none'}}><a>Home</a></Link>
           </IconButton>

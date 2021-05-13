@@ -55,6 +55,15 @@ export default makeStyles((theme) => ({
       
     }
   },
+  mobileButton: {
+    marginTop: '-10px',
+    width: '115px',
+    backgroundColor : '#A87DAB',
+    '&:hover': {
+      backgroundColor : '#BBBBBB',
+      
+    }
+  },
   navbarbuttons: {
     marginLeft: '-20px',
     marginTop: '3px',
