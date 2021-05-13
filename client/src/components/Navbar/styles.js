@@ -49,6 +49,7 @@ export default makeStyles((theme) => ({
     }
   },
   root: {
+    borderRadius: '15px',
    color : 'white',
     '&:hover': {
       color: 'black',
@@ -58,7 +59,9 @@ export default makeStyles((theme) => ({
   mobileButton: {
  
     
-    width: '115px',
+    width: '100px',
+    borderRadius: '15px',
+    marginLeft: '15px',
     color : 'white',
     '&:hover': {
       color : 'black',
