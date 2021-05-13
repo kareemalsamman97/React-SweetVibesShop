@@ -200,7 +200,7 @@ const CustomersOrder = ({cart , addToCart , RemoveFromToCart , OrderNow , Remove
           </div>
           <div>
             <div>Shipping Price</div>
-            <div>₪{ShippingPrice} / Free shiping above 50₪ </div>
+            <div>₪{ShippingPrice} <label style = {{ fontWeight: '600'}}>/ Free shiping above 50₪ </label></div>
           </div>
           <div>
             <div><strong>Total</strong></div>
