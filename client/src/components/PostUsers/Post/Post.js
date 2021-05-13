@@ -16,10 +16,13 @@ import Customer from '../../CustomersOrders/CustomerCart'
 import navbar from '../../Navbar/Navbar'
 import PostForm from '../Posts'
 import SearchIcon from '@material-ui/icons/Search';
-const Post = ({  post, setCurrentId , onAdd , addToCart , showProductFullID  }) => {
+const Post = ({  post, setCurrentId  , addToCart , showProductFullID  }) => {
   const [cart , setCart] = useState([]);
   const [page , setPage] = useState('post')
   const [FullProductisVisible, FullProductsetIsVisible ] = useState(true);
+  const RamadanModeFromLocal = JSON.parse(localStorage.getItem('ramadanmode'))
+  const [LabelLogo, SetLabelLogo] = useState('#A87DAB');
+  const [CartColor, SetCartColor] = useState('#121212');
   const history = useHistory()
   const classes = useStyles();
   const MenuClciked = () =>{
@@ -27,7 +30,17 @@ const Post = ({  post, setCurrentId , onAdd , addToCart , showProductFullID  }) 
     
   }
   
- 
+  useEffect(() => {
+   
+    if(RamadanModeFromLocal === true){
+      SetCartColor('#BBBBBB')
+      SetLabelLogo('#F7CC70')
+      
+    } else if(RamadanModeFromLocal === false){
+      SetCartColor('#121212')
+      SetLabelLogo('#A87DAB')
+    }
+  });
   
   return (
     <Grow in>
@@ -55,7 +68,7 @@ const Post = ({  post, setCurrentId , onAdd , addToCart , showProductFullID  }) 
       </CardContent>
       <CardActions className={classes.cardActions}>
       <Button variant="contained" onClick={()=> addToCart(post) } className={classes.cart}>Add To Cart</Button>
-      <Button variant="contained"  onClick={ () =>{ {setCurrentId(post._id); showProductFullID();  }}} className={classes.order}>Order Now</Button>
+      <Button variant="contained"  onClick={ () =>{ {setCurrentId(post._id); showProductFullID();  }}} className={classes.order} style={{backgroundColor : LabelLogo}}>Order Now</Button>
       </CardActions>
     
     </Card>

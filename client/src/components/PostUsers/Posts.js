@@ -34,6 +34,7 @@ export const Posts = (value) => {
   const RamadanModeFromLocal = JSON.parse(localStorage.getItem('ramadanmode'))
   const [LabelLogo, SetLabelLogo] = useState('#A87DAB');
   const [CartColor, SetCartColor] = useState('#121212');
+  
   const cartmount = JSON.parse(localStorage.getItem('cartstorage'))
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -310,13 +311,13 @@ if(FormisVisible === true){
      
       <Container  maxWidth="lg" className="allform">
         
-      <Card className={classes.textcenter} >
+      <Card className={classes.textcenter}  >
          
       <Card.Header >Shop</Card.Header>
      
       <HomeIcon onClick={homebutton} className="homebuttonall" />
       
-      <Card.Body >
+      <Card.Body  >
         <Card.Title>Sweet Vibes Bites</Card.Title>
       
         <Card.Text>
@@ -329,7 +330,7 @@ if(FormisVisible === true){
         {posts.map((post) => (
           <Grid key={post._id} item xs={12} sm={4} md={4}>
               <div style={{ display: isVisible ? "block" : "none" }}>
-              <Post onAdd={onAdd} post={post} setCurrentId={setCurrentId}  addToCart={addToCart} showProductFullID={showProductFullID}/>
+              <Post onAdd={onAdd} post={post} setCurrentId={setCurrentId}   addToCart={addToCart} showProductFullID={showProductFullID}/>
               </div>
       
           </Grid>
