@@ -275,8 +275,9 @@ if(FormisVisible === true){
   useEffect(() => {
     window.onpopstate = () => {
       if(OrderNowStatus === true) {
+        isissetIsVisible(true)
         localStorage.setItem('IsOrderNowButtonClciked' , JSON.stringify(false))
-        setIsVisible(true)
+    
         OrdersetIsVisible(false)
         history.push('/shop')
       }
