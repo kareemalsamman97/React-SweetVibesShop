@@ -24,6 +24,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 export const Posts = (value) => {
+  const CurrentIDHome = JSON.parse(localStorage.getItem('ordercurrentidfromhome'))
   const OrderNowStatus = JSON.parse(localStorage.getItem('IsOrderNowButtonClciked'))
   const isSigninClicked = JSON.parse(localStorage.getItem('isSigninClicked'))
   const fullproductview = JSON.parse(localStorage.getItem('fullproductview'))
@@ -70,6 +71,11 @@ export const Posts = (value) => {
    CartLabelsetIsVisible(false)
   }
   useEffect(() => {
+    if(CurrentIDHome !== '0')
+    {
+      setCurrentId(CurrentIDHome)
+      localStorage.setItem('ordercurrentidfromhome' , JSON.stringify('0'))
+    }
     if(RamadanModeFromLocal === true){
       SetCartColor('#BBBBBB')
       SetLabelLogo('#F7CC70')

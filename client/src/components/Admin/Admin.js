@@ -224,7 +224,7 @@ const AdminStorage = () => {
    <Card className={classes.fetchingdata} >
   <Card.Body className="text-center" >
     <Card.Title>Fetcing your data ..</Card.Title>
-    <CircularProgress disableShrink className={classes.CircularProgress}/>;
+    <CircularProgress disableShrink className={classes.CircularProgress}/>
   </Card.Body>
 </Card>
 </Container>
