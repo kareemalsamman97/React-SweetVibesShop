@@ -108,8 +108,11 @@ const EachOrder = ({orders , order , AlretDelete , EditOrder ,setCurrentId  , cu
                 <Grid item xs={5} >
                 <Typography className={classes.Labels} >Created At : {moment(order.createdAt).format("MMM Do YY")}</Typography>
                 </Grid>
-                <Grid item xs={12} >
+                <Grid item xs={5} >
                 <Typography className={classes.Labels} style={{textDecoration: 'underline'}} >Status : {order.StatusOrder}</Typography>
+                </Grid>
+                 <Grid item xs={5} >
+                <Typography className={classes.Labels} style={{textDecoration: 'underline'}} >Order ID : {order._id}</Typography>
                 </Grid>
                 <Grid item xs={5} >
                 <Typography className={classes.Labels} >Customer Order :</Typography>
