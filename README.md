@@ -42,9 +42,10 @@ This Project built with React
 2- Css
 3- Sass
 4- Material ui
-5- Node.js
-6- MongoDB
-7- Express
+5- Bootstrap
+6- Node.js
+7- MongoDB
+8- Express
 ## Setup
 - run ```cd server && npm i && npm start``` for the back end side
 - run ```cd client && npm i && npm start``` for the fronted side
