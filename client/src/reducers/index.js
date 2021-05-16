@@ -1,7 +1,16 @@
 import { combineReducers } from 'redux';
-
-import posts from './posts';
-import auth from './auth';
-import orders from './orders';
-import notiys from './notification.js';
+import posts from './Posts[Reducers]';
+import auth from './Auth[Reducers]';
+import orders from './Orders[Reducers]';
+import notiys from './Notfication[Reducer]';
 export const reducers = combineReducers({ posts, auth , orders , notiys});
+
+
+//************************************************************************************************************//
+//                                       Home Reducer                                                         //
+//                                                                                                            //
+// here it contines all the redcuers page in one page                                                         //
+//                                                                                                            //
+//                                                                                                            //
+//                                                                                                            //
+//************************************************************************************************************//

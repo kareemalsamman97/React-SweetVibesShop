@@ -1,0 +1,37 @@
+.Image{
+margin-right: 500px;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px;
+
+}
+.cotainer{
+   position: absolute;
+   top: 12%;
+   left: 47%;
+   margin: 20px;
+   width: 500px;
+}
+.TextField{
+    width: 600px;
+}
+.mainLabel{
+    padding-left: 15%;
+}
+@media only screen and (max-width: 768px){
+    .Image{
+        min-width: 100%;
+    }
+    .cotainer{
+        top: 45%;
+        left: 0;
+    }
+}
+/**************************************************************************************************************/
+/*                                         Css Style                                                          //
+//                                                                                                            //
+// this is the Css Style for the Admin storage                                                                //
+//                                                                                                            //
+//                                                                                                            //
+//                                                                                                            //
+/**************************************************************************************************************/

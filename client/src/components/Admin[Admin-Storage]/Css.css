@@ -1,0 +1,79 @@
+*{
+z-index: 1;
+}
+.container{
+    width: 1000px;
+}
+.image{
+    width: 160px;
+    height:120px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+  
+}
+.deleteicon{
+    background-color: #A87DAB;
+}
+.editform{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.homeIcon{
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
+    color:  #A87DAB;
+}
+.homeIcon :hover{
+    color:  #BBBBBB;
+}
+
+.refreshIcon{
+    position: absolute;
+    left: 40px;
+    cursor: pointer;
+    color:  #A87DAB;
+   
+}
+.refreshIcon :hover{
+    color:  #BBBBBB;
+    
+}
+.addIcon{
+    position: absolute;
+    left: 70px;
+    cursor: pointer;
+    color:  #A87DAB;
+}
+.addIcon :hover{
+    color:  #BBBBBB;
+  
+}
+.alret{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 300px;
+}
+@media only screen and (max-width: 768px){
+.card-body{
+min-height: 830px;
+}
+.alret{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 300px;
+}
+}
+
+/**************************************************************************************************************/
+/*                                         Css Style                                                          //
+//                                                                                                            //
+// this is the Css Style for the Admin storage                                                                //
+//                                                                                                            //
+//                                                                                                            //
+//                                                                                                            //
+/**************************************************************************************************************/
