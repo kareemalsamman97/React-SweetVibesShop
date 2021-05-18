@@ -2,7 +2,7 @@
 ![mobile](https://user-images.githubusercontent.com/76554103/118412002-44c95580-b6a0-11eb-946b-23e529cd7e39.png)
 ![mobile2](https://user-images.githubusercontent.com/76554103/118412005-48f57300-b6a0-11eb-9694-e06ff74c1a58.png)
 
--------------------------------------------------------------------Admin Tools------------------------------------------------------------------------------
+-------------------------------------------------------------------Admin Tools-----------------------------------------------------------------------------
 
 ![storage](https://user-images.githubusercontent.com/76554103/118646821-5bc78f00-b7e9-11eb-8d97-39928dc5cf20.png)
 ![orders](https://user-images.githubusercontent.com/76554103/118646830-5ec27f80-b7e9-11eb-9a9b-46882a065208.png)
