@@ -1,6 +1,13 @@
 
 ![mobile](https://user-images.githubusercontent.com/76554103/118412002-44c95580-b6a0-11eb-946b-23e529cd7e39.png)
 ![mobile2](https://user-images.githubusercontent.com/76554103/118412005-48f57300-b6a0-11eb-9694-e06ff74c1a58.png)
+
+-----------------------------------------------------Admin Tools--------------------------------------------------
+
+![storage](https://user-images.githubusercontent.com/76554103/118646821-5bc78f00-b7e9-11eb-8d97-39928dc5cf20.png)
+![orders](https://user-images.githubusercontent.com/76554103/118646830-5ec27f80-b7e9-11eb-9a9b-46882a065208.png)
+![inbox](https://user-images.githubusercontent.com/76554103/118646837-6124d980-b7e9-11eb-8d54-af4c07bf055a.png)
+
 # SweetVibes
 SweetVibes Project : 'is a project that tooked from an idea , and the idea was that a women that make a chocolate bites, so it named her shop with 'SweetVibes Bites' , so this Project 'Website' containes : 
 1- Home Page.
